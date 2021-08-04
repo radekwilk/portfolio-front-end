@@ -1,0 +1,115 @@
+/*
+0 - 600px:    mobile phones;
+600-900px:    Tablet portrait;
+900-1200px:   Tablet landscape;
+1200-1800px:  Where our normal style applies;
++ 1800px:     Big screens;
+
+$breakpoint argument choices
+- phone;
+- tab-port;
+- tab-land;
+- big-desktop
+
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  /*setting root font size to 10px, based for rem setting on browser default font-size of 16px, => 1rem = 10px;  => 10px/16px = 62.5%  */
+  scroll-behavior: smooth; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #555;
+  background-color: #fff; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-xsmall {
+  margin-bottom: 1rem !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 3rem !important; } }
+
+.u-margin-bottom-large {
+  margin-bottom: 8rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-large {
+      margin-bottom: 5rem !important; } }
+
+.u-margin-top-large {
+  margin-top: 8rem !important; }
+
+.u-margin-top-xlarge {
+  margin-top: 10rem !important; }
+
+.u-strong {
+  font-weight: 800; }
+
+.u-newLane {
+  display: block;
+  margin-bottom: 0.5rem; }
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block; }
+
+/* HEADERS ============================== */
+.heading--1 {
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0.5rem 0; }
+
+.heading--2 {
+  font-size: 2.5rem;
+  text-align: center;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-weight: 400; }
+
+.heading--3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center; }
+
+/* PARAGRAPH ============================ */
+.paragraph {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  margin: 1.4rem 0; }
