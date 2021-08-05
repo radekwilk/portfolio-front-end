@@ -3,13 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foods</title>
+  <title>Radek Wilk - Portfolio</title>
 
+  <!-- Fontawesome link -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <!-- Splidejs CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+  <!-- Custom CSS file -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
-  <h1>Foods</h1>
-  
+<body>
+  <!-- Start of home section -->
+  <section class="section section-home" id="home">
+    
+    <!-- Splide slideshow -->
+    <div class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide splide__slide--1">
+            <!-- img is added as background -->
+          </li>
+          <li class="splide__slide splide__slide--2">
+            <!-- img is added as background -->
+          </li>
+          <li class="splide__slide splide__slide--3">
+            <!-- img is added as background -->
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- Main Navigation -->
+    <nav class="nav main-navbar">
+      <!-- start of nav-logo wrapper -->
+      <div class="nav-logo">
+        <img src="img/wilks-white-md.png" alt="logo" class="nav-logo-img">
+      </div>
+      <!-- Navigation list -->
+      <div class="nav-menu">
+        <ul class="nav-menu-list">
+          <li class="nav-menu-item">
+            <h4 class="nav-menu-link-title">Home</h4>
+            <a href="#" class="nav-menu-link">
+              <i class="fas fa-house-damage"></i>
+            </a>
+          </li>
+          <li class="nav-menu-item">
+            <h4 class="nav-menu-link-title">About</h4>
+            <a href="#" class="nav-menu-link">
+              <i class="fas fa-user-tie"></i>
+            </a>
+          </li>
+          <li class="nav-menu-item">
+            <h4 class="nav-menu-link-title">Portfolio</h4>
+            <a href="#" class="nav-menu-link">
+              <i class="fas fa-briefcase"></i>
+            </a>
+          </li>
+          <li class="nav-menu-item">
+            <h4 class="nav-menu-link-title">Blog</h4>
+            <a href="#" class="nav-menu-link">
+              <i class="fas fa-receipt"></i>
+            </a>
+          </li>
+          <li class="nav-menu-item">
+            <h4 class="nav-menu-link-title">Contact</h4>
+            <a href="#" class="nav-menu-link">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="hero-wrapper">
+      <h1 class="heading--1 hero-heading">Radek Wilk</h1>
+      <p class="paragraph hero-paragraph">
+        I am a 
+        <span>Freelancer</span>
+        <!-- <span>Designer</span>
+        <span>Photographer</span>
+        <span>Web developer</span> -->
+      </p>
+    </div>
+
+    <!-- Social media navigation -->
+    <nav class="nav social-nav">
+        <!-- List of social media icons -->
+        <ul class="social-nav-list">
+          <li class="social-nav-item">
+            <a href="" class="social-nav-link">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="social-nav-item">
+            <a href="" class="social-nav-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="social-nav-item">
+            <a href="" class="social-nav-link">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="social-nav-item">
+            <a href="" class="social-nav-link">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        </ul>
+    </nav>
+
+  </section>
+  <!-- End of home section -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  <script src="js/custom_splide.js"></script>
 </body>
 </html>

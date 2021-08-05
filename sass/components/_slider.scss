@@ -1,0 +1,21 @@
+.splide__slide {
+    position: relative;
+    z-index: -100;
+
+    &--1 {
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url(../img/slide-1.jpg);
+    }
+
+    &--2 {
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url(../img/slide-2.jpg);
+    }
+
+    &--3 {
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url(../img/slide-3.jpg);
+    }
+
+}
+
+.splide__pagination {
+    visibility: hidden;
+}

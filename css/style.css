@@ -44,8 +44,7 @@ body {
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
-  color: #555;
-  background-color: #fff; }
+  color: #fff; }
 
 .u-center-text {
   text-align: center !important; }
@@ -99,6 +98,7 @@ body {
 .heading--2 {
   font-size: 2.5rem;
   text-align: center;
+  text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 1px;
   font-weight: 400; }
@@ -108,8 +108,99 @@ body {
   font-weight: 400;
   text-align: center; }
 
+.hero {
+  color: #fff; }
+  .hero-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .hero-heading {
+    font-size: 6rem; }
+
+.nav {
+  position: fixed;
+  color: #fff;
+  top: 0;
+  padding: 4rem 2.5rem;
+  z-index: 100; }
+  .nav-logo {
+    flex-basis: 25%; }
+    .nav-logo-img {
+      width: 100%;
+      object-fit: cover; }
+  .nav-menu {
+    flex-basis: 75%; }
+  .nav-menu-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+  .nav-menu-link-title {
+    display: none; }
+  .nav-menu-item {
+    margin-bottom: 3.5rem;
+    text-align: center; }
+  .nav-menu-link {
+    color: #fff; }
+    .nav-menu-link i {
+      font-size: 3rem; }
+
+.main-navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  left: 0;
+  width: 15rem;
+  height: 100%;
+  background-color: rgba(14, 15, 15, 0.6); }
+
+.social-nav {
+  right: 0;
+  width: 10rem;
+  min-height: 50%; }
+  .social-nav-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+  .social-nav-item {
+    margin-bottom: 2rem;
+    text-align: center; }
+  .social-nav-link {
+    color: #fff; }
+    .social-nav-link i {
+      font-size: 1.8rem; }
+
 /* PARAGRAPH ============================ */
 .paragraph {
   font-size: 1.5rem;
   line-height: 1.7;
   margin: 1.4rem 0; }
+
+.hero-paragraph {
+  font-size: 3.5rem;
+  text-align: center; }
+
+.section {
+  width: 100%; }
+  .section-home {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative; }
+
+.splide__slide {
+  position: relative;
+  z-index: -100; }
+  .splide__slide--1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(../img/slide-1.jpg); }
+  .splide__slide--2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(../img/slide-2.jpg); }
+  .splide__slide--3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(../img/slide-3.jpg); }
+
+.splide__pagination {
+  visibility: hidden; }
