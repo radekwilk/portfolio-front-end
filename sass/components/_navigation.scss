@@ -1,3 +1,4 @@
+// .nav is a class for both main and social media navbars
 .nav {
     position: fixed;
     color: $color-white;
@@ -5,6 +6,7 @@
     padding: 4rem 2.5rem;
     z-index: 100;
 
+    // settings for logo container
     &-logo {
         flex-basis: 25%;
 
@@ -14,10 +16,22 @@
         }
     }
 
+    // settings for main menu
     &-menu {
         flex-basis: 75%;
+
+        &::before {
+            content: ' ';
+            position: absolute;
+            left: 0;
+            top: 20%;
+            width: calc(100% + .5rem);
+            height: .5rem;
+            background-color: $color-dark-transparent-2;
+        }
     }
 
+    // styling of <ul> element, holding all nav items
     &-menu-list {
         list-style-type: none;
         display: flex;
@@ -25,18 +39,48 @@
         justify-content: space-evenly;
     }
 
+    // settings for nav icon title - hidden by default, shows on hover
     &-menu-link-title {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        color: $color-green-primary;
+        background-color: $color-dark-transparent-2;
+        padding: 1.2rem 0.5rem;
+        border-radius: .5rem;
+        width: 10rem;
+        transform: translateX(-50%) translateY(-6rem);
+        transition: all .1s;
+        
     }
 
+    // settings of <li> of out menu list items
     &-menu-item {
         margin-bottom: 3.5rem;
         text-align: center;
+        position: relative;
+        
+
+        &:hover .nav-menu-link-title {
+            opacity: 1;
+            visibility: visible;
+            transform:translateX(-50%) translateY(-7rem);
+            transition: all .6s;
+        }
+
+        &:hover .nav-menu-link {
+            color: $color-green-primary;
+        }
     }
 
+    //styling of link element
     &-menu-link {
         color: $color-white;
+        transition: color 0.6s;
 
+        // styling of nav icons
         & i {
             font-size: 3rem;
         }
@@ -44,6 +88,7 @@
 
 }
 
+// styling of mani navbar
 .main-navbar {
     display: flex;
     flex-direction: column;
@@ -53,9 +98,15 @@
     width: 15rem;
     height: 100%;
     background-color: $color-dark-transparent-1;
+    border-right: .5rem solid transparent;
+    transition: border-right .5s;
+
+    &:hover {
+        border-right: 0.5rem solid $color-dark-transparent-2;
+    }
 }
 
-
+// styling of social media navbar
 .social {
 
     &-nav {
@@ -73,10 +124,15 @@
         &-item {
             margin-bottom: 2rem;
             text-align: center;
+
+            &:hover .social-nav-link {
+                color: $color-green-primary;
+            }
         }
 
         &-link {
             color: $color-white;
+            transition: color .6s;
 
           & i {
             font-size: 1.8rem;
