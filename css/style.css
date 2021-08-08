@@ -12,11 +12,31 @@ $breakpoint argument choices
 - big-desktop
 
 */
-@keyframes scale {
+@keyframes cd-rotate-1-in {
   0% {
-    transform: scale(1); }
+    transform: rotateX(180deg);
+    opacity: 0; }
+  35% {
+    transform: rotateX(120deg);
+    opacity: 0; }
+  65% {
+    opacity: 0; }
   100% {
-    transform: scale(1.3); } }
+    transform: rotateX(360deg);
+    opacity: 1; } }
+
+@keyframes cd-rotate-1-out {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1; }
+  35% {
+    transform: rotateX(-40deg);
+    opacity: 1; }
+  65% {
+    opacity: 0; }
+  100% {
+    transform: rotateX(180deg);
+    opacity: 0; } }
 
 *,
 *::after,
@@ -91,6 +111,38 @@ body {
   clear: both;
   display: block; }
 
+.cd-headline {
+  font-size: 3.6rem; }
+
+/* -------------------------------- 
+
+rotate-1 
+
+-------------------------------- */
+.cd-headline.rotate-1 .cd-words-wrapper {
+  display: inline-block;
+  perspective: 300px; }
+
+.cd-headline.rotate-1 b {
+  height: 5.5rem;
+  opacity: 0;
+  transform-origin: 50% 100%;
+  transform: rotateX(180deg);
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.cd-headline.rotate-1 b.is-visible {
+  opacity: 1;
+  position: relative;
+  transform: rotateX(0deg);
+  animation: cd-rotate-1-in 1.2s; }
+
+.cd-headline.rotate-1 b.is-hidden {
+  transform: rotateX(180deg);
+  animation: cd-rotate-1-out 1.2s; }
+
 /* HEADERS ============================== */
 .heading--1 {
   font-size: 4rem;
@@ -122,7 +174,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); }
   .hero-heading {
-    font-size: 6rem; }
+    font-size: 6rem;
+    line-height: 1.1; }
 
 .nav {
   position: fixed;

@@ -16,25 +16,43 @@
 <body>
   <!-- Start of home section -->
   <section class="section section-home" id="home">
-    
-    <!-- Splide slideshow -->
-    <div class="splide">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide splide__slide--1">
-            <!-- img is added as background -->
-          </li>
-          <li class="splide__slide splide__slide--2">
-            <!-- img is added as background -->
-          </li>
-          <li class="splide__slide splide__slide--3">
-            <!-- img is added as background -->
-          </li>
-        </ul>
+
+    <div class="content content-home">
+      <!-- Splide slideshow -->
+      <div class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide splide__slide--1">
+              <!-- img is added as background -->
+            </li>
+            <li class="splide__slide splide__slide--2">
+              <!-- img is added as background -->
+            </li>
+            <li class="splide__slide splide__slide--3">
+              <!-- img is added as background -->
+            </li>
+          </ul>
+        </div>
       </div>
+  
+      <header class="hero-wrapper">
+        <h1 class="heading--1 hero-heading">Radek Wilk</h1>
+          <section class="cd-intro">
+            <h2 class="cd-headline rotate-1">
+              <span>I am a </span>
+              <span class="cd-words-wrapper">
+                <b class="is-visible">Freelancer</b>
+                <b>Designer</b>
+                <b>Developer</b>
+                <b>Photographer</b>
+              </span>
+            </h2>
+          </section> <!-- cd-intro -->
+      </header>
     </div>
+    <!-- End of home content -->
 
-
+    <!-- MAIN AND SOCIAL MEDIA NAVIGATION -->
     <!-- Main Navigation -->
     <nav class="nav main-navbar">
       <!-- start of nav-logo wrapper -->
@@ -48,7 +66,7 @@
         <ul class="nav-menu-list">
           <li class="nav-menu-item">
             <h4 class="nav-menu-link-title">Home</h4>
-            <a href="#" class="nav-menu-link">
+            <a href="#home" class="nav-menu-link">
               <i class="fas fa-house-damage"></i>
             </a>
           </li>
@@ -80,17 +98,6 @@
       </div>
     </nav>
 
-    <div class="hero-wrapper">
-      <h1 class="heading--1 hero-heading">Radek Wilk</h1>
-      <p class="paragraph hero-paragraph">
-        I am a 
-        <span>Freelancer</span>
-        <!-- <span>Designer</span>
-        <span>Photographer</span>
-        <span>Web developer</span> -->
-      </p>
-    </div>
-
     <!-- Social media navigation -->
     <nav class="nav social-nav">
         <!-- List of social media icons -->
@@ -121,7 +128,13 @@
   </section>
   <!-- End of home section -->
 
+  <!-- jQuery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Splide slider cdn -->
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  <!-- Custom settings for Splide slider -->
   <script src="js/custom_splide.js"></script>
+  <!-- custom jQuery script triggering heading text rotation -->
+  <script src="js/rotate_headline.js"></script>
 </body>
 </html>
