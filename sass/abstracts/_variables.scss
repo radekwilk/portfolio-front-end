@@ -10,6 +10,10 @@ $color-dark-transparent-2: rgba(14,15,15, 0.9);
 //primary green colour
 $color-green-primary: #25ca7f;
 
+// section colors
+$color-bg-dark: #0e0f10;
+$color-bg-darker: #070708;
+
 //FONT
 $default-font-size: 1.6rem;
 
@@ -18,6 +22,13 @@ $grid-width: 114rem;
 $grid-width-medium: 80%;
 $grid-width-small: 95%;
 
-$gutter-vertical: 8rem;
-$gutter-vertical-small: 6rem;
-$gutter-horizontal: 6rem;
+$gutter-vertical: 2rem;
+$gutter-vertical-small: 1rem;
+$gutter-horizontal: 2rem;
+
+// width values
+$width-main-nav: 15rem;
+$width-social-nav: 10rem;
+
+
+

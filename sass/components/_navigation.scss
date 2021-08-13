@@ -95,7 +95,7 @@
     justify-content: space-around;
     align-items: center;
     left: 0;
-    width: 15rem;
+    width: $width-main-nav;
     height: 100%;
     background-color: $color-dark-transparent-1;
     border-right: .5rem solid transparent;
@@ -111,7 +111,7 @@
 
     &-nav {
         right: 0;
-        width: 10rem;
+        width: $width-social-nav;
         min-height: 50%;
 
         &-list {
