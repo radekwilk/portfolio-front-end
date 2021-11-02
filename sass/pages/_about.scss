@@ -218,6 +218,107 @@
         }
     }
 
-    
+    // ABOUT SERVICES STYLING
+    &-services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
 
+        &-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            row-gap: $gutter-vertical-large;
+            column-gap: $gutter-horizontal-large;
+            width: 90%;
+            margin: 4.5rem auto;
+            padding: 2.5rem;
+            // transform: translateY(0);
+            // transition: transform 0.6s;
+
+            // &:hover {
+            //     transform: translateY(-.5rem);
+            // }
+        }
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 26rem;
+            width:100%;
+            padding: 1rem 2rem;
+            background-color: $color-bg-darker;
+            border-radius: 1rem;
+            box-shadow: rgba(100, 100, 111, 0.1) 0px 0.7rem 2.9rem 0px;
+            transform: translateY(0);
+            transition: box-shadow 0.6s, transform 0.6s;
+            
+
+            &:hover {
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+                 rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+                 transform: translateY(-.5rem);
+            }
+
+            &-icon-wrapper {
+                display: flex;
+                width: 100%;
+                height: 30%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &-icon {
+                width: 8rem;
+                height: 8rem;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 3.5rem;
+                background-color: $color-bg-dark;
+                position: relative;
+
+                &::after {
+                    content: " ";
+                    border: 1px solid $color-green-primary;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 0;
+                    width: 0;
+                    border-radius: 50%;
+                    transition: width 0.8s, height 0.8s, opacity 0.7s;
+                    opacity: 0;
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                }
+
+                &:hover::after {
+                    opacity: 1;
+                    height: 7rem;
+                    width: 7rem;
+                }
+                
+            }
+
+            &-title {
+                font-size: 2.5rem;
+                color: $color-green-primary;
+            }
+
+            &-text {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+        }
+    }
 }
