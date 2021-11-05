@@ -6,7 +6,7 @@ new Splide( '.splide', {
     autoplay: true,
     interval: 6000,
     width : '100vw',
-        height: '100vh',
+    height: '100vh',
     arrows: false,
     //pagination: false,
     pauseOnHover: false,
