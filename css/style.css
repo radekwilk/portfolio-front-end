@@ -371,8 +371,7 @@ rotate-1
   top: 0;
   left: 15rem;
   display: flex;
-  flex-direction: column;
-  display: none; }
+  flex-direction: column; }
 
 .about-me {
   background-color: #070708;
@@ -601,15 +600,15 @@ rotate-1
 
 .about-testimonials-card-container {
   display: flex;
-  width: 100%;
   height: 50rem;
   margin: 8rem auto 0 auto;
-  width: 95%; }
+  width: 95%;
+  height: 28rem; }
 
 .about-testimonials-card {
   background-color: #070708;
-  width: 40vw;
-  height: 28rem;
+  width: 30vw;
+  height: 100%;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
