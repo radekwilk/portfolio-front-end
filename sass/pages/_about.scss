@@ -462,6 +462,21 @@
          box-shadow: rgba(100, 100, 111, 0.1) 0px 0.7rem 2.9rem 0px;
          padding: 0 2rem;
          position: relative;
+         border-radius: 1rem;
+         transform: translateY(0);
+         transition: box-shadow 0.6s, transform 0.6s;
+
+         &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+             rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+             transform: translateY(-.5rem);
+
+             & .about-price-card-img::after {
+                opacity: 1;
+                height: 7rem;
+                width: 7rem;
+            }
+        }
          
          &:not(:first-child) {
              margin-left: auto;
@@ -504,11 +519,26 @@
              & i {
                  font-size: 4.5rem;
              }
+
+             &::after {
+                content: " ";
+                border: 1px solid $color-green-primary;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 0;
+                width: 0;
+                border-radius: 50%;
+                transition: width 0.8s, height 0.8s, opacity 0.7s;
+                opacity: 0;
+            }
          }
 
          &-title {
              font-size: 2.2rem;
              margin-top: 1.2rem;
+             color: $color-green-primary;
          }
 
 
@@ -539,26 +569,41 @@
              align-items: center;
             list-style-type: none;
 
-             & li {
+            & li {
                 font-size: 1.4rem;
                 font-weight: 200;
 
+            }
+
+            &--basic li {
                 &:nth-child(3) {
                     text-decoration: line-through;
                     color: $color-gray-light;
                 }
-
+    
                 &:nth-child(4) {
                     text-decoration: line-through;
                     color: $color-gray-light;
                 }
-
+    
                 &:nth-child(5) {
                     text-decoration: line-through;
                     color: $color-gray-light;
                 }
-             }
+            }
 
+            &--standard li {
+    
+                &:nth-child(4) {
+                    text-decoration: line-through;
+                    color: $color-gray-light;
+                }
+    
+                &:nth-child(5) {
+                    text-decoration: line-through;
+                    color: $color-gray-light;
+                }
+            }
          }
 
          &-btn {
