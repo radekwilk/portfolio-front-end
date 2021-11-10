@@ -760,8 +760,40 @@ rotate-1
         text-decoration: line-through;
         color: #888; }
   .about-price-card-btn {
-    width: 60%;
-    height: 3.4rem;
+    width: 40%;
+    height: 3.8rem;
     border-radius: .3rem;
     outline: none;
-    border: none; }
+    border: none;
+    background-color: transparent;
+    color: #888;
+    position: relative;
+    cursor: pointer;
+    display: inline-block; }
+    .about-price-card-btn:hover {
+      color: #25ca7f; }
+    .about-price-card-btn:hover::before {
+      width: 100%;
+      transition: all 0.5s; }
+    .about-price-card-btn:hover::after {
+      transform: translateX(-43%) translateY(-2.3rem) rotate(90deg) scaleX(0.28);
+      transition: all 0.8s; }
+    .about-price-card-btn::before {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 15%;
+      background-color: rgba(14, 15, 16, 0.6);
+      border-radius: 0 .3rem .3rem 0;
+      transition: all 0.5s; }
+    .about-price-card-btn::after {
+      content: ' ';
+      position: absolute;
+      width: 110%;
+      height: 8%;
+      top: 105%;
+      left: -5%;
+      background-color: #25ca7f;
+      transition: all 0.5s; }

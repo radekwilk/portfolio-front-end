@@ -562,11 +562,58 @@
          }
 
          &-btn {
-             width: 60%;
-             height: 3.4rem;
+             width: 40%;
+             height: 3.8rem;
              border-radius: .3rem;
              outline: none;
              border: none;
+             background-color: transparent;
+             color: $color-gray-light;
+             position: relative;
+             cursor: pointer;
+             display: inline-block;
+             
+
+             &:hover {
+                 color: $color-green-primary;
+             }
+
+             &:hover::before {
+                 width: 100%;
+                 transition: all 0.5s;
+             }
+
+             &:hover::after {
+                transform: translateX(-43%) translateY(-2.3rem) rotate(90deg) scaleX(0.28);
+                // width: 0.4rem;
+                // height: 100%;
+                transition: all 0.8s;
+                
+            }
+
+
+             &::before {
+                 content: ' ';
+                 position: absolute;
+                 left: 0;
+                 top: 0;
+                 height: 100%;
+                 width: 15%;
+                 background-color: rgba($color-bg-dark, $alpha: 0.6);
+                 border-radius: 0 .3rem .3rem 0 ;
+                 transition: all 0.5s;
+             }
+
+             &::after {
+                content: ' ';
+                position: absolute;
+                width: 110%;
+                height: 8%;
+                top: 105%;
+                left: -5%;
+                background-color:$color-green-primary;
+                transition: all 0.5s;
+            }
          }
     }
 }
