@@ -11,6 +11,11 @@
         display: flex;
         flex-direction: column;
         padding-bottom: 8rem;
+        // transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+        // transform-origin: top right;
+        transition: all 1s;
         // display: none;
     }
 

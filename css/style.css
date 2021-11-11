@@ -121,7 +121,9 @@ rotate-1
 -------------------------------- */
 .cd-headline.rotate-1 .cd-words-wrapper {
   display: inline-block;
-  perspective: 300px; }
+  perspective: 300px;
+  color: #25ca7f;
+  font-weight: 900; }
 
 .cd-headline.rotate-1 b {
   height: 5.5rem;
@@ -372,7 +374,10 @@ rotate-1
   left: 15rem;
   display: flex;
   flex-direction: column;
-  padding-bottom: 8rem; }
+  padding-bottom: 8rem;
+  opacity: 1;
+  visibility: visible;
+  transition: all 1s; }
 
 .about-me {
   background-color: #070708;
