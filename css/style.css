@@ -298,6 +298,9 @@ rotate-1
     .nav-menu-link i {
       font-size: 3rem; }
 
+.active a {
+  color: #25ca7f; }
+
 .main-navbar {
   display: flex;
   flex-direction: column;
@@ -888,3 +891,181 @@ rotate-1
 .change.about-price-card-back {
   transform: scale(1);
   border-radius: 0.5rem; }
+
+.resume-section {
+  background-color: #0e0f10;
+  width: calc(100% - 15rem);
+  height: fit-content;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 15rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s; }
+
+.resume-summary {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 3rem 2rem; }
+
+.resume-experience {
+  width: 45%; }
+
+.resume-education {
+  width: 45%; }
+
+.resume-content {
+  background-color: #070708;
+  border-radius: 0.5rem;
+  margin-top: 3rem;
+  padding: 3rem 2rem 3rem 6rem;
+  height: fit-content;
+  box-shadow: rgba(100, 100, 111, 0.1) 0px 0.7rem 2.9rem 0px;
+  transform: translateY(0);
+  transition: transform 0.6s; }
+  .resume-content:hover {
+    transform: translateY(-0.5rem); }
+  .resume-content-card {
+    width: 100%;
+    height: auto;
+    position: relative; }
+    .resume-content-card:not(:last-child) {
+      margin-bottom: 2.5rem; }
+    .resume-content-card::before {
+      content: ' ';
+      position: absolute;
+      width: 1px;
+      height: 90%;
+      background-color: #25ca7f;
+      top: -1rem;
+      left: -4rem; }
+    .resume-content-card::after {
+      content: ' ';
+      position: absolute;
+      width: 2.5rem;
+      height: 1px;
+      background-color: #25ca7f;
+      top: 1.5rem;
+      left: -3.4rem; }
+    .resume-content-card-heading {
+      text-transform: capitalize;
+      font-size: 1.8rem;
+      margin-bottom: .6rem;
+      letter-spacing: .1rem;
+      position: relative; }
+      .resume-content-card-heading::after {
+        content: ' ';
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 2px solid #25ca7f;
+        background-color: #070708;
+        border-radius: 50%;
+        position: absolute;
+        top: 0.8rem;
+        left: -4.7rem;
+        transition: background-color 0.4s; }
+    .resume-content-card-info {
+      color: #25ca7f;
+      font-size: 1.2rem;
+      letter-spacing: .1rem;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem; }
+      .resume-content-card-info i {
+        margin-left: .3rem; }
+      .resume-content-card-info span {
+        border-left: 1px solid #25ca7f;
+        padding-left: .5rem; }
+    .resume-content-card:hover .resume-content-card-heading::after {
+      background-color: #25ca7f; }
+    .resume-content-card-text {
+      font-size: 1.4rem; }
+
+.resume-skils {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  .resume-skils-content {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 4rem auto;
+    padding: 3rem 2rem;
+    background-color: #070708;
+    border-radius: .5rem;
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 0.7rem 2.9rem 0px;
+    transform: translateY(0);
+    transition: transform 0.6s; }
+  .resume-skils-progress-bar {
+    width: 50rem;
+    height: .8rem;
+    background-color: #0e0f10;
+    margin: 4rem 0;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 1rem #0e0f10;
+    display: flex;
+    align-items: center;
+    position: relative; }
+  .resume-skils-progress-text {
+    position: absolute;
+    left: 0.1rem;
+    top: -2rem;
+    font-size: 1.4rem;
+    color: #fff; }
+    .resume-skils-progress-text span {
+      margin: 0 0.5rem;
+      font-size: 1.4rem;
+      font-weight: 600; }
+  .resume-skils-progress-percent {
+    width: 0;
+    height: 100%;
+    background-color: #177A4D;
+    border-radius: 0.3rem;
+    transition: width 0.8s 0.5s ease-in-out;
+    position: relative; }
+    .resume-skils-progress-percent::after {
+      content: ' ';
+      position: absolute;
+      top: calc(-0.8rem + 3px);
+      right: calc(-1.8rem + 3px);
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 50%;
+      border: 3px solid #177A4D; }
+  .resume-skils-back-end {
+    display: grid;
+    width: 80%;
+    margin-left: 4rem;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%; }
+    .resume-skils-back-end-circle {
+      width: 16rem;
+      height: 16rem;
+      border: 0.8rem solid #0e0f10;
+      border-radius: 50%;
+      position: relative; }
+      .resume-skils-back-end-circle::after {
+        content: ' ';
+        position: absolute;
+        top: -.8rem;
+        left: -0.8rem;
+        width: calc(100% + 1.6rem);
+        height: calc(100% + 1.6rem);
+        border: 0.8rem solid #177A4D;
+        border-radius: 50%; }
+    .resume-skils-back-end-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center; }
+    .resume-skils-back-end-title {
+      font-size: 1.6rem;
+      font-weight: 600; }
+    .resume-skils-back-end-percent {
+      font-size: 1.4rem; }

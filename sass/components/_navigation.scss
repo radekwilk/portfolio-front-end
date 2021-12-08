@@ -88,6 +88,11 @@
 
 }
 
+//styling of active nav-links
+.active a {
+    color: $color-green-primary;
+}
+
 // styling of mani navbar
 .main-navbar {
     display: flex;
