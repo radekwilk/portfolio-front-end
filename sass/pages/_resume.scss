@@ -196,39 +196,8 @@
               margin-left: 4rem;
               grid-template-columns: 50% 50%;
               grid-template-rows: 50% 50%;
-
-              &-circle {
-                  width: 16rem;
-                  height: 16rem;
-                  border: .8rem solid $color-bg-dark;
-                  border-radius: 50%;
-                  position: relative;
-
-                  &::after {
-                      content: ' ';
-                      position: absolute;
-                      top: -.8rem;
-                      left:-0.8rem;
-                      width: calc(100% + 1.6rem);
-                      height: calc(100% + 1.6rem);
-                      border: 0.8rem solid $color-green-primary-darker;
-                      border-radius: 50%;
-                  }
-              }
-
-              &-text {
-                @include absCenter;
-                text-align: center;
-              }
-
-              &-title {
-                  font-size: 1.6rem;
-                  font-weight: 600;
-              }
-
-              &-percent {
-                  font-size: 1.4rem;
-              }
+              justify-items: center;
+              align-items: center;
           }
     }
 }

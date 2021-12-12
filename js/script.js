@@ -103,7 +103,13 @@ const skills = document.querySelector('.resume-skils-content')
 // values in skills array [html, css, Javascript, SASS, ReactJS, PHP, Python]
 const progressBarPercents = [95, 90, 85, 70, 60, 50, 60];
 
-
+//for circle progress-bars
+const circle = document.querySelectorAll("circle")
+//values for skills PHP, Figma, Python, Django
+const circleBarPercents = [65, 50, 75, 40];
+// This is to start the counter for percent count in the middle of the circle
+let counter = [0,0,0,0]
+const timeIntervals = [28, 26, 24, 18]
 
 
 const mainFn = ()=> {
@@ -118,13 +124,36 @@ const mainFn = ()=> {
           el.style.width = `${progressBarPercents[i]}%`;
           el.previousElementSibling.firstElementChild.textContent = progressBarPercents[i];
       })
+
+      circle.forEach((el,i) => {
+        el.style.animation = `circle-${circleBarPercents[i]} 2s linear forwards`
+        idNumber = document.getElementById(`number--${i+1}`)
+        
+          circlePercentCount(idNumber, circleBarPercents[i], counter[i], timeIntervals[i])
+      })
     } else {
-      document.querySelectorAll('.resume-skils-progress-percent').forEach((el, i) => {
+      document.querySelectorAll('.resume-skils-progress-percent').forEach((el) => {
         el.style.width = 0;
         el.previousElementSibling.firstElementChild.textContent = 0;
     })
+
+    circle.forEach((el,i) => {
+      el.style.animation = "getback-circle 2s linear forwards"
+    })
+    // circle.style.animation = "getback-circle 2s linear forwards"
     }
 }
+
+function circlePercentCount(elementID, percent, counter, time) {
+  setInterval(() => {
+    if(counter == percent) {
+      clearInterval()
+    } else {
+      counter += 1;
+      elementID.innerHTML = `${counter}%`
+    }
+  }, time)
+} 
 
 // mainFn()
 
