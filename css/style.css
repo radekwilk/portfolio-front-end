@@ -1068,6 +1068,7 @@ circle {
     display: flex;
     justify-content: space-between;
     width: 90%;
+    height: auto;
     margin: 4rem auto;
     padding: 3rem 2rem;
     background-color: #070708;
@@ -1117,5 +1118,6 @@ circle {
     margin-left: 4rem;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
+    row-gap: 2rem;
     justify-items: center;
     align-items: center; }

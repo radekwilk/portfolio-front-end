@@ -109,6 +109,7 @@ const circle = document.querySelectorAll("circle")
 const circleBarPercents = [65, 50, 75, 40];
 // This is to start the counter for percent count in the middle of the circle
 let counter = [0,0,0,0]
+// This array will hold time delay for time intervals for each circle
 const timeIntervals = [28, 26, 24, 18]
 
 
@@ -125,11 +126,14 @@ const mainFn = ()=> {
           el.previousElementSibling.firstElementChild.textContent = progressBarPercents[i];
       })
 
+      // for each circle, add correct animation based on assigned percentage
       circle.forEach((el,i) => {
         el.style.animation = `circle-${circleBarPercents[i]} 2s linear forwards`
         idNumber = document.getElementById(`number--${i+1}`)
-        
+        // and then run the % number, giving argument to circlePercentCount function
           circlePercentCount(idNumber, circleBarPercents[i], counter[i], timeIntervals[i])
+          //we need to set counter values to percentages now, so it will not run every time we scroll
+          counter[i] = circleBarPercents[i]
       })
     } else {
       document.querySelectorAll('.resume-skils-progress-percent').forEach((el) => {
@@ -137,10 +141,11 @@ const mainFn = ()=> {
         el.previousElementSibling.firstElementChild.textContent = 0;
     })
 
-    circle.forEach((el,i) => {
-      el.style.animation = "getback-circle 2s linear forwards"
-    })
-    // circle.style.animation = "getback-circle 2s linear forwards"
+      //when screen is out of view, circle animation is reset, same as count values. 
+      circle.forEach((el,i) => {
+        el.style.animation = "getback-circle 2s linear forwards"
+        counter[i] = 0
+      })
     }
 }
 
